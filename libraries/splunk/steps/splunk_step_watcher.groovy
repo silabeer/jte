@@ -1,14 +1,14 @@
 @BeforeStep
-void before(context){
-  println "Splunk: running before ${context.step} step" 
+void before(hookContext){
+  println "Splunk: running before the ${hookContext.library} library's ${hookContext.step} step" 
 }
 
 @AfterStep({ config.afterSteps ? (context.step in config.afterSteps) : true })
-void after(context){
-  println "Splunk: running after ${context.step} step" 
+void after(hookContext){
+  println "Splunk: running after the ${conthookContextext.library} library's ${hookContext.step} step" 
 }
 
 @AfterStep({ currentBuild.result.toString() == "FAILURE" })
-void afterFailure(context){
-  println "Splunk: running after ${context.step} step failure"  
+void afterFailure(hookContext){
+  println "Splunk: running after the ${hookContext.library} library's ${hookContext.step} step failure"  
 }
