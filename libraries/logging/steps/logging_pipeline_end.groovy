@@ -1,4 +1,4 @@
 @CleanUp
 void call(hookContext){
-    println "Splunk: end of the pipeline!" 
+    println "End log event of the pipeline!" 
 }
