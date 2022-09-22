@@ -1,5 +1,7 @@
 libraries{
-    sonarqube
+    sonarqube{
+        servername = "sq1"
+    }
     ansible
     maven
     git
