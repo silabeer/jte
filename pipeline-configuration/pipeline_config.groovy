@@ -1,9 +1,10 @@
 libraries{
-    sonarqube{
-        servername = "sq1"
-    }
+    sonarqube
+  	logging
     ansible
-    maven
+  	maven {
+  	mavenCredentials = 'my-project'
+  	}
     git
 }
 
